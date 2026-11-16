@@ -2808,7 +2808,7 @@ function showBoard(){
       <h3>So spielt ihr</h3>
       <ol class="rules">
         <li>Scannt den QR-Code mit eurem Tablet.</li>
-        <li>Gebt euren Gruppennamen ein und wählt ein Tier.</li>
+        <li>Gebt euren Gruppennamen ein und wählt ein Gruppen-Symbol.</li>
         <li>Löst die Aufgaben <b>gemeinsam</b> – jede und jeder darf mal tippen.</li>
         <li>Ein Tipp hilft, kostet aber einen Tipp-Punkt. Falsche Antworten werden gezählt.</li>
         <li>Habt ihr den Tresor geknackt? Zeigt eure Ergebniskarte!</li>
@@ -2824,6 +2824,8 @@ function showBoard(){
           <button class="btn light" onclick="setBoardTimer(30)">30 min</button>
           <button class="btn light" onclick="setBoardTimer(45)">45 min</button>
           <button class="btn light" onclick="setBoardTimer(60)">60 min</button>
+          <button class="btn light" onclick="setBoardTimer(75)">75 min</button>
+          <button class="btn light" onclick="setBoardTimer(90)">90 min</button>
         </div>
       </div>
       <div class="card">
@@ -2879,7 +2881,7 @@ function showSetup(){
     <p>Frosti hat den Schlitten-Schlüssel im Tresor versteckt. Sammelt in acht Räumen die Zahlen-Kugeln und knackt den Code!</p>
     <h3 style="margin-top:18px">Wie heißt eure Gruppe?</h3>
     <div class="answer"><input id="gname" maxlength="24" placeholder="z. B. Die Lebkuchen" style="font-size:1.5rem"></div>
-    <h3 style="margin-top:18px">Wählt euer Tier</h3>
+    <h3 style="margin-top:18px">Wählt euer Gruppen-Symbol</h3>
     <div class="pick" id="avs">${AVATARS.map(a=>`<button class="${a===setupAvatar?'sel':''}" style="font-size:2rem" onclick="pickAvatar('${a}')">${a}</button>`).join('')}</div>
     <button class="btn green" style="font-size:1.4rem;padding:16px 34px" onclick="startGroup()">Los geht’s! 🎄</button>
   </div>`;
